@@ -1,0 +1,35 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Find a pair of elements from an specified array whose sum equals a specific target number</title>
+     
+    </head>
+    <script>
+            function twoSum(nums, target_num) {
+    var map = [];
+    var arr = [];
+    
+    for (var x = 0; x < nums.length; x++)
+    {
+    if (map[nums[x]] != null)
+    {
+    var index = map[nums[x]];
+    arr[0] = index;
+    arr[1] = x;
+    break;
+    }
+    else
+    {
+    map[target_num - nums[x]] = x;
+    }
+    }
+    return arr;
+    }
+    console.log(twoSum([10,20,10,40,50,60,70],50));
+    </script>
+    <body>
+    
+    </body>
+    </html>

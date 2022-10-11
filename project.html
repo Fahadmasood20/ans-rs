@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="lib/script.js"></script>
+  </head>
+
+  <body>
+    <!-- <h1 id="tag">Hello Plunker!</h1> -->
+  </body>
+  <script>
+    
+    var myStr = '';
+first_part = 'I like to eat';
+
+function GetSentence() {
+  console.log('starting function');
+  myStr = first_part;
+  var html = ''
+  console.log('so far so good');
+  for (var i = 0; i < 3; i++) {
+    var x = ['apples', "bananas", 'cookies'];
+    myStr = first_part + ' ' + x[i] + ' ';
+    
+   var Heading =  document.createElement('h1');
+   Heading.innerText = myStr;
+   document.querySelectorAll('body')[0].append(Heading);
+  console.log(myStr);
+  }
+  
+  
+}
+
+GetSentence();
+  </script>
+</html>

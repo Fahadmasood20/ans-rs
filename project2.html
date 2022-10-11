@@ -1,0 +1,43 @@
+ 
+<!doctype html>
+ 
+<html>
+ <head>
+   <script
+ src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script>
+   function computeTotal() {
+    let total = 0;
+    console.log($("li"));
+    $("li").each(function(){
+      total += parseInt($(this).text(), 10);
+    
+   
+      
+    });
+    
+    console.log("total: ", total);
+    $("#total").text(`Total: ${total}`);
+   }
+    
+   document.addEventListener("DOMContentLoaded", function(){
+    computeTotal();
+   });
+    </script>
+ </head>
+ 
+ <body>
+   <ul>
+     <li>10</li>
+     <li>50</li>
+     <li>10</li>
+   </ul>
+   <div id="total">  
+   </div>
+
+   
+ </body>
+</html>
+ 
+
+
